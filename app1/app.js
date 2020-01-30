@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
   res.send('hello world');
 });
 
+// call time service and return the result
 app.get('/tell-me-time', (req, res) => {
   axios.get(timeServiceAPI)
     .then((response) => {
