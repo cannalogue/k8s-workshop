@@ -1,5 +1,5 @@
 
-TAG=dingxizheng
+TAG=cpu2
 
 # Login to ECR
 eval `aws ecr get-login --no-include-email --region ca-central-1`
