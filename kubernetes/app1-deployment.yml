@@ -15,7 +15,7 @@ spec:
       containers:
       - name: app1
         # Replace <your_tag> with the tag you just created
-        image: 645026774230.dkr.ecr.ca-central-1.amazonaws.com/k8s-workshop-app1:<your_tag>
+        image: 645026774230.dkr.ecr.ca-central-1.amazonaws.com/k8s-workshop-app1:file
         resources:
           limits:
             memory: "30Mi"
@@ -25,4 +25,12 @@ spec:
         env:
           - name: TIME_SERVICE_API
             value: http://time-service/current-time
+      #   volumeMounts:
+      #     - name: app1-volume
+      #       mountPath: "/usr/src/app/files"
+      # volumes:
+      # - name: app1-volume
+      #   persistentVolumeClaim:
+      #     claimName: app1-volume-claim
+            
 

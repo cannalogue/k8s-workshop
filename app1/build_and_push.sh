@@ -1,5 +1,5 @@
 
-TAG=cpu2
+TAG=file
 
 # Login to ECR
 eval `aws ecr get-login --no-include-email --region ca-central-1`
