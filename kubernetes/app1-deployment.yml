@@ -21,4 +21,7 @@ spec:
             cpu: "10m"
         ports:
         - containerPort: 3000
+        env:
+          - name: TIME_SERVICE_API
+            value: http://time-service/current-time
 
