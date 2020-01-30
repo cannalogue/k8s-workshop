@@ -13,7 +13,8 @@ spec:
         app: app2
     spec:
       containers:
-      - name: myapp
+      - name: app2
+        # Replace <your_tag> with the tag you just created
         image: 645026774230.dkr.ecr.ca-central-1.amazonaws.com/k8s-workshop-app2:<your_tag>
         resources:
           limits:
