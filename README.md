@@ -11,7 +11,10 @@ Please use your own namespace for this workshop
 # Folder Structure
 ```
 -----------------------------------------------
-- appliction
+- app1 # the first application
+  - app.js
+  - Dockerfile
+- app2 # time service
   - app.js
   - Dockerfile
 - kubernetes

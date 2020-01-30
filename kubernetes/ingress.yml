@@ -1,0 +1,18 @@
+# Auth gateway ingresses
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: app1-ingress
+  annotations:
+    # cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+spec:
+  rules:
+  - host: <your_sub_domain>.cloud.cannalogue.ca
+    http:
+      paths:
+      - path: /
+        backend: 
+          serviceName: app1-service
+          servicePort: 80

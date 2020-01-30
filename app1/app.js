@@ -6,11 +6,11 @@ var app = express();
 var timeServiceAPI = process.env.TIME_SERVICE_API || 'http://localhost:3003/current-time'
 
 // respond with "hello world" when a GET request is made to the homepage
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.send('hello world');
 });
 
-app.get('/tell-me-time', function (req, res) {
+app.get('/tell-me-time', (req, res) => {
   axios.get(timeServiceAPI)
     .then((response) => {
       res.send(response.data);
